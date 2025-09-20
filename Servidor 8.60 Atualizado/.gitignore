@@ -26,12 +26,33 @@ htdocs/config/config.php
 htdocs/config/config.local.php
 .env
 
-# Arquivos grandes que excedem o limite do GitHub
-cliente/Tibia.spr
-cliente/Tibia.dat
-cliente/Tibia.pic
-cliente/Tibia.otfi
-Global/src/cotire/tfs_CXX_prefix.hxx.gch
+# Manter apenas htdocs e Global
+/cliente/
+/solera-otclientv8/
+/otserver_files.zip
+/website.zip
+/COMO_USAR.md
+/DATAPACK_ESTRUTURA.md
+/lista_itens_completa.md
+
+# Arquivos grandes e binários
+*.spr
+*.dat
+*.pic
+*.otfi
+*.gch
+*.exe
+*.dll
+*.zip
+*.rar
+*.7z
+
+# Arquivos de build
+Global/build/
+Global/src/cotire/
+*.o
+*.so
+*.dylib
 *.log
 logs/
 backup/
