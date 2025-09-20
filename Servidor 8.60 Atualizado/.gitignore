@@ -11,12 +11,6 @@
 *.7z
 *~
 
-# Arquivos de compilação
-CMakeCache.txt
-CMakeFiles/
-cmake_install.cmake
-Makefile
-
 # Arquivos de cache
 htdocs/cache/*
 !htdocs/cache/.htaccess
@@ -26,43 +20,16 @@ htdocs/config/config.php
 htdocs/config/config.local.php
 .env
 
-# Manter apenas htdocs e Global
-/cliente/
-/solera-otclientv8/
-/otserver_files.zip
-/website.zip
-/COMO_USAR.md
-/DATAPACK_ESTRUTURA.md
-/lista_itens_completa.md
-
 # Arquivos grandes e binários
 *.spr
 *.dat
 *.pic
 *.otfi
-*.gch
 *.exe
 *.dll
 *.zip
 *.rar
 *.7z
-
-# Arquivos de build
-Global/build/
-Global/src/cotire/
-*.o
-*.so
-*.dylib
-*.log
-logs/
-backup/
-
-# Arquivos de segurança
-server_security.sh
-security_keys/
-*.pem
-*.key
-*.crt
 
 # Arquivos temporários
 *.tmp
@@ -75,7 +42,7 @@ security_keys/
 .idea/
 *.sublime-*
 
-# Build directories
+# Arquivos de build
 build/
 Debug/
 Release/
