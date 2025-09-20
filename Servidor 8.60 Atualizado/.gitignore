@@ -1,0 +1,51 @@
+# Logs
+*.log
+**/logs/*.log
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Arquivos de build
+**/build/**
+**/CMakeFiles/**
+**/CMakeCache.txt
+**/CMakeOutput.log
+**/CMakeError.log
+
+# Arquivos de instalação
+*.exe
+*.msi
+*.zip
+*.rar
+
+# Arquivos de configuração local
+config.local.*
+*.local
+
+# Arquivos de cache
+**/cache/**
+**/tmp/**
+
+# Arquivos de log do cliente
+otclientv8.log
+packet.log
+
+# Arquivos de log do servidor
+**/data/logs/*.log
+
+# Arquivos de backup do banco
+*.sql.bak
+*.sql.backup
+
+# Arquivos de instalação do XAMPP
+xampp-*.exe
+
+# Arquivos de instalação do cliente
+Instalado*.exe
+
+# Pastas duplicadas
+htdocs0/
+htdocs_backup/
