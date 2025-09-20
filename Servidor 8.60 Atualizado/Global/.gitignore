@@ -365,7 +365,6 @@ c_cpp_properties.json
 config.lua
 # Extensions
 *.ini
-*.otb
 *.exe
 *.otbm
 *.rar
