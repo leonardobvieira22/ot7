@@ -30,7 +30,7 @@ using DBResult_ptr = std::shared_ptr<DBResult>;
 class Database
 {
 	public:
-		Database() = default;
+                Database();
 		~Database();
 
 		// non-copyable
