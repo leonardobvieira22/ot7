@@ -9298,10 +9298,7 @@ int LuaScriptInterface::luaPlayerGetSpectators(lua_State* L)
 
 	lua_createtable(L, spectators.size(), 0);
 
-	int _spectators = 0;
-	for (const auto& spectator : spectators){
-		_spectators += 1;
-	}
+	int _spectators = spectators.size();
 
 	lua_pushnumber(L, _spectators);
 	return 2;
