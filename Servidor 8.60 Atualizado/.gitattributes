@@ -1,5 +1,18 @@
-*.dll filter=lfs diff=lfs merge=lfs -text
-*.spr filter=lfs diff=lfs merge=lfs -text
-*.gch filter=lfs diff=lfs merge=lfs -text
-*.dat filter=lfs diff=lfs merge=lfs -text
-*.exe filter=lfs diff=lfs merge=lfs -text
+﻿* text=auto
+*.lua text
+*.md text
+*.otui text
+*.otmod text
+*.json text
+*.sql text
+*.xml text
+*.cpp text
+*.h text
+*.txt text
+*.png binary
+*.jpg binary
+*.ico binary
+*.dat binary
+*.pic binary
+*.spr binary
+*.otfi binary

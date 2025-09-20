@@ -5,30 +5,50 @@ DEFAULT_LAYOUT = "retro" -- on android it's forced to "mobile", check code bello
 
 -- If you don't use updater or other service, set it to updater = ""
 Services = {
-  website = "http://otclient.ovh", -- currently not used
-  updater = "http://otclient.ovh/api/updater.php",
-  stats = "",
-  crash = "http://otclient.ovh/api/crash.php",
-  feedback = "http://otclient.ovh/api/feedback.php",
-  status = "http://otclient.ovh/api/status.php"
+  website = "https://181.215.45.238", -- website url
+  updater = "https://181.215.45.238/api/updater.php",
+  stats = "https://181.215.45.238/api/stats.php",
+  crash = "https://181.215.45.238/api/crash.php",
+  feedback = "https://181.215.45.238/api/feedback.php",
+  status = "https://181.215.45.238/api/status.php"
 }
 
 -- Servers accept http login url, websocket login url or ip:port:version
 Servers = {
-  LocalServer = "127.0.0.1:7171:860"
+  OTServer = "181.215.45.238:7171:860"
 }
 
---Server = "ws://otclient.ovh:3000/"
---Server = "ws://127.0.0.1:88/"
---USE_NEW_ENERGAME = true -- uses entergamev2 based on websockets instead of entergame
-ALLOW_CUSTOM_SERVERS = true -- if true it shows option ANOTHER on server list
+ALLOW_CUSTOM_SERVERS = false -- disable custom servers for security
+USE_NEW_ENERGAME = true -- uses entergamev2 based on websockets for better security
 
-g_app.setName("OTCv8")
--- CONFIG END
+-- Basic anti-tampering
+local function verifyClientIntegrity()
+  local files = {
+    "/data/things/860/Tibia.spr",
+    "/data/things/860/Tibia.dat",
+    "/modules/game_interface/gameinterface.lua",
+    "/modules/client_entergame/entergame.lua"
+  }
+  
+  for _, file in ipairs(files) do
+    if not g_resources.fileExists(file) then
+      g_logger.fatal("Client file integrity check failed. Please redownload the client.")
+      g_app.exit()
+      return false
+    end
+  end
+  return true
+end
+
+g_app.setName("OTServer")
 
 -- print first terminal message
 g_logger.info(os.date("== application started at %b %d %Y %X"))
 g_logger.info(g_app.getName() .. ' ' .. g_app.getVersion() .. ' rev ' .. g_app.getBuildRevision() .. ' (' .. g_app.getBuildCommit() .. ') made by ' .. g_app.getAuthor() .. ' built on ' .. g_app.getBuildDate() .. ' for arch ' .. g_app.getBuildArch())
+
+if not verifyClientIntegrity() then
+  return
+end
 
 if not g_resources.directoryExists("/data") then
   g_logger.fatal("Data dir doesn't exist.")
@@ -77,10 +97,4 @@ if type(Services.crash) == 'string' and Services.crash:len() > 4 and g_modules.g
   g_modules.ensureModuleLoaded("crash_reporter")
 end
 
--- run updater, must use data.zip
-if type(Services.updater) == 'string' and Services.updater:len() > 4 
-  and g_resources.isLoadedFromArchive() and g_modules.getModule("updater") then
-  g_modules.ensureModuleLoaded("updater")
-  return Updater.init(loadModules)
-end
 loadModules()

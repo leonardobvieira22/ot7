@@ -51,13 +51,20 @@ if(!defined('INITIALIZED'))
 																		<center><img src="images/downloads/tibia.png" width="60"></center>
 																		</td>
 																		<td>
-																		Cliente 8.60 Propio do Servidor.<br>useo para evitar problemas em seu jogo.
+																		<b>Cliente Oficial OTServer 8.60</b><br>
+																		Cliente otimizado e seguro, configurado especialmente para nosso servidor.<br>
+																		<small style="color: #5f9de7;">✓ Conexão automática</small><br>
+																		<small style="color: #5f9de7;">✓ Proteção contra modificações</small><br>
+																		<small style="color: #5f9de7;">✓ Performance otimizada</small>
 																		</td>
 																		<td>
-																		<center><a href="https://mega.nz/file/CdpmwaqY#GIdW2xHItY0pFhRKdmytJAxto6XGmNOT3nkU0pwqLYU"><img src="images/downloads/download.gif" width="80"></a><br><b>44,8 MB</b></center>
+																		<center><a href="/download.php?file=otclient_dx.exe" title="Versão DirectX - Recomendado para Windows 10/11"><img src="images/downloads/download.gif" width="80"></a><br><b>45,2 MB</b><br><small>DirectX</small></center>
 																		</td>
 																		<td>
-																		<center><a href="https://mega.nz/file/CdpmwaqY#GIdW2xHItY0pFhRKdmytJAxto6XGmNOT3nkU0pwqLYU"><img src="images/downloads/winrar.ico" width="70"></a><br><b>34,2 MB</b></center>
+																		<center><a href="/download.php?file=otclient_gl.exe" title="Versão OpenGL - Compatível com sistemas mais antigos"><img src="images/downloads/download.gif" width="80"></a><br><b>44,8 MB</b><br><small>OpenGL</small></center>
+																		</td>
+																		<td>
+																		<center><a href="/download.php?file=data.zip" title="Download completo em ZIP"><img src="images/downloads/winrar.ico" width="70"></a><br><b>34,5 MB</b><br><small>ZIP</small></center>
 																		</td>
 																	</tr>									
 																</table>

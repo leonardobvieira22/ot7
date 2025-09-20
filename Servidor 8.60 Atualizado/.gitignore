@@ -1,51 +1,53 @@
-# Logs
+﻿# Arquivos anteriores
 *.log
-**/logs/*.log
+*.exe
+*.dll
+.vscode/
+.vs/
+*.db
+*.bak
+*.zip
+*.rar
+*.7z
+*~
+
+# Arquivos de compilação
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Arquivos de cache
+htdocs/cache/*
+!htdocs/cache/.htaccess
+
+# Arquivos de configuração sensíveis
+htdocs/config/config.php
+htdocs/config/config.local.php
+.env
+*.log
+logs/
+backup/
+
+# Arquivos de segurança
+server_security.sh
+security_keys/
+*.pem
+*.key
+*.crt
 
 # Arquivos temporários
 *.tmp
-*.temp
 *.bak
-*.backup
+*.swp
+*~
 
-# Arquivos de build
-**/build/**
-**/CMakeFiles/**
-**/CMakeCache.txt
-**/CMakeOutput.log
-**/CMakeError.log
+# Arquivos de desenvolvimento
+.vscode/
+.idea/
+*.sublime-*
 
-# Arquivos de instalação
-*.exe
-*.msi
-*.zip
-*.rar
-
-# Arquivos de configuração local
-config.local.*
-*.local
-
-# Arquivos de cache
-**/cache/**
-**/tmp/**
-
-# Arquivos de log do cliente
-otclientv8.log
-packet.log
-
-# Arquivos de log do servidor
-**/data/logs/*.log
-
-# Arquivos de backup do banco
-*.sql.bak
-*.sql.backup
-
-# Arquivos de instalação do XAMPP
-xampp-*.exe
-
-# Arquivos de instalação do cliente
-Instalado*.exe
-
-# Pastas duplicadas
-htdocs0/
-htdocs_backup/
+# Build directories
+build/
+Debug/
+Release/
