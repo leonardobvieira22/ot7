@@ -33,8 +33,35 @@ class OutputMessageAllocator
 {
 	public:
 		using value_type = OutputMessage;
+		using pointer = OutputMessage*;
+		using const_pointer = const OutputMessage*;
+		using reference = OutputMessage&;
+		using const_reference = const OutputMessage&;
+		using size_type = std::size_t;
+		using difference_type = std::ptrdiff_t;
+		
 		template<typename U>
-		struct rebind {using other = LockfreePoolingAllocator<U, OUTPUTMESSAGE_FREE_LIST_CAPACITY>;};
+		struct rebind {
+			using other = OutputMessageAllocator;
+		};
+		
+		OutputMessage* allocate(std::size_t n) {
+			return static_cast<OutputMessage*>(std::malloc(n * sizeof(OutputMessage)));
+		}
+		
+		void deallocate(OutputMessage* p, std::size_t) {
+			std::free(p);
+		}
+		
+		template<typename U, typename... Args>
+		void construct(U* p, Args&&... args) {
+			new(p) U(std::forward<Args>(args)...);
+		}
+		
+		template<typename U>
+		void destroy(U* p) {
+			p->~U();
+		}
 };
 
 void OutputMessagePool::scheduleSendAll()
