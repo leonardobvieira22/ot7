@@ -286,3 +286,35 @@ bool DBResult::next()
 	row = mysql_fetch_row(handle);
 	return row != nullptr;
 }
+
+DBInsert::DBInsert(std::string query) : query(std::move(query))
+{
+}
+
+bool DBInsert::addRow(const std::string& row)
+{
+	if (!values.empty()) {
+		values += ',';
+	}
+	values += row;
+	return true;
+}
+
+bool DBInsert::addRow(std::ostringstream& row)
+{
+	bool result = addRow(row.str());
+	row.str("");
+	return result;
+}
+
+bool DBInsert::execute()
+{
+	if (values.empty()) {
+		return true;
+	}
+	
+	std::string fullQuery = query + " VALUES " + values;
+	values.clear();
+	
+	return Database::getInstance().executeQuery(fullQuery);
+}
