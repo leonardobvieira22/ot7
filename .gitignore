@@ -1,0 +1,27 @@
+﻿# Arquivos anteriores
+*.log
+*.exe
+*.dll
+.vscode/
+.vs/
+*.db
+*.bak
+*.zip
+*.rar
+*.7z
+*~
+
+# Arquivos de compilação
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Arquivos de cache
+htdocs/cache/*
+!htdocs/cache/.htaccess
+
+# Build directories
+build/
+Debug/
+Release/

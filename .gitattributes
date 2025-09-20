@@ -1,0 +1,19 @@
+﻿* text=auto
+*.lua text
+*.md text
+*.otui text
+*.otmod text
+*.json text
+*.sql text
+*.xml text
+*.cpp text
+*.h text
+*.txt text
+*.png binary
+*.jpg binary
+*.ico binary
+*.dat binary
+*.pic binary
+*.spr filter=lfs diff=lfs merge=lfs -text
+*.otfi binary
+*.gch filter=lfs diff=lfs merge=lfs -text

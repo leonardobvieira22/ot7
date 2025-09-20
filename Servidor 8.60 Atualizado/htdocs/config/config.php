@@ -28,17 +28,17 @@ if ($is_https) {
 /** @var array $config */
 $config['base_url'] = $base_url;
 $config['site']['base_url'] = $base_url;
-$config['site']['realurl'] = "http://localhost/"; // Put the real url for your website without www DO NOT FORGET FROM / AT THE END
-$config['site']['realurlwww'] = "http://localhost/"; // Put the real url for your website with www IF IT IS A SUBDOMINUM PUT THE MSM URL OF THE REAL URL
-$config['site']['testurl'] = "http://localhost/"; // Put the url you use to test your site (LOCALHOST)
+$config['site']['realurl'] = "http://181.215.45.238/"; // Put the real url for your website without www DO NOT FORGET FROM / AT THE END
+$config['site']['realurlwww'] = "http://181.215.45.238/"; // Put the real url for your website with www IF IT IS A SUBDOMINUM PUT THE MSM URL OF THE REAL URL
+$config['site']['testurl'] = "http://181.215.45.238/"; // Put the url you use to test your site (LOCALHOST)
 /** END SERVER URLS */
 
 
 /** SERVER PATHS */
 if ($config['base_url'] == $config['site']['realurl'] || $config['base_url'] == $config['site']['realurlwww']) {
-	$config['site']['serverPath'] = "C:\Users\User\Desktop\ot6\Servidor 8.60 Atualizado\Global/"; // SERVER PATH IN PRODUCTION
+	$config['site']['serverPath'] = "/opt/otserver/ot7/Global/"; // SERVER PATH IN PRODUCTION
 } else {
-	$config['site']['serverPath'] = "C:\Users\User\Desktop\ot6\Servidor 8.60 Atualizado\Global/"; // SERVERPATH LOCALHOST
+	$config['site']['serverPath'] = "/opt/otserver/ot7/Global/"; // SERVERPATH LOCALHOST
 }
 /** END SERVER PATHS */
 
@@ -85,9 +85,9 @@ $config['social']['fbappid'] = "";
 
 # Using Ajax Field Validation, this is important if you want to use ajax check in your create account.
 $config['site']['sqlHost'] = "localhost";
-$config['site']['sqlUser'] = "root";
-$config['site']['sqlPass'] = "Quente0011@";
-$config['site']['sqlBD'] = "global";
+$config['site']['sqlUser'] = "otserver";
+$config['site']['sqlPass'] = "OTserver@2025#KEQLS";
+$config['site']['sqlBD'] = "otserver";
 
 # Characters animatedOutfits php
 $config['site']['animatedOutfits_url'] = 'http://127.0.0.1:8090/AnimatedOutfits/animoutfit.php?';
