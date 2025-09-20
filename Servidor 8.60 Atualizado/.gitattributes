@@ -1,7 +1,0 @@
-﻿*.spr filter=lfs diff=lfs merge=lfs -text
-*.gch filter=lfs diff=lfs merge=lfs -text
-*.dat filter=lfs diff=lfs merge=lfs -text
-*.pic filter=lfs diff=lfs merge=lfs -text
-*.otfi filter=lfs diff=lfs merge=lfs -text
-*.exe filter=lfs diff=lfs merge=lfs -text
-*.dll filter=lfs diff=lfs merge=lfs -text
