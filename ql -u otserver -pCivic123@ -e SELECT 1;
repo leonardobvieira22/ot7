@@ -1,0 +1,20 @@
+[0;1;32m●[0m otserver.service - OTServer 8.60
+     Loaded: loaded (]8;;file://86lFZAOQ3966/etc/systemd/system/otserver.service/etc/systemd/system/otserver.service]8;;; [0;1;32menabled[0m; preset: [0;1;32menabled[0m)
+     Active: [0;1;32mactive (running)[0m since Sat 2025-09-20 08:06:55 UTC; 1h 6min ago
+   Main PID: 28311 (tfs)
+      Tasks: 4 (limit: 9486)
+     Memory: 3.8G (peak: 3.8G)
+        CPU: 16min 6.800s
+     CGroup: /system.slice/otserver.service
+             └─[0;38;5;245m28311 /opt/otserver/ot7/Global/tfs[0m
+
+Sep 20 09:08:02 86lFZAOQ3966 tfs[28311]: [48.5K blob data]
+Sep 20 09:08:02 86lFZAOQ3966 tfs[28311]: [48.7K blob data]
+Sep 20 09:08:02 86lFZAOQ3966 tfs[28311]: [13.4K blob data]
+Sep 20 09:08:02 86lFZAOQ3966 tfs[28311]: [270B blob data]
+Sep 20 09:08:02 86lFZAOQ3966 tfs[28311]: [48.2K blob data]
+Sep 20 09:08:02 86lFZAOQ3966 tfs[28311]: [48.2K blob data]
+Sep 20 09:08:02 86lFZAOQ3966 tfs[28311]: [48.3K blob data]
+Sep 20 09:08:02 86lFZAOQ3966 tfs[28311]: [48.5K blob data]
+Sep 20 09:08:02 86lFZAOQ3966 tfs[28311]: [48.7K blob data]
+Sep 20 09:08:02 86lFZAOQ3966 tfs[28311]: [13.4K blob data]

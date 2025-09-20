@@ -1,0 +1,12 @@
+# Arquivos muito grandes para GitHub
+Global/build/cotire/*.gch
+Global/data/world/realmap.otbm
+
+# Arquivos muito grandes para GitHub
+Global/build/cotire/*.gch
+Global/data/world/*.otbm
+
+# Arquivos muito grandes para GitHub
+Global/build/cotire/*.gch
+Global/data/world/*.otbm
+*.otbm
