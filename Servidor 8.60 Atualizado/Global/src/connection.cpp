@@ -289,6 +289,5 @@ void Connection::handleTimeout(ConnectionWeak_ptr connectionWeak, const boost::s
 
 void Connection::dispatchBroadcastMessage(const OutputMessage_ptr& msg)
 {
-	auto& context = socket.get_executor().context();
-	context.post(std::bind(&Connection::broadcastMessage, shared_from_this(), msg));
+	boost::asio::post(socket.get_executor(), std::bind(&Connection::broadcastMessage, shared_from_this(), msg));
 }
