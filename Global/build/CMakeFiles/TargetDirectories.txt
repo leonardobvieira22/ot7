@@ -1,0 +1,8 @@
+/opt/otserver/ot7/Global/build/CMakeFiles/tfs.dir
+/opt/otserver/ot7/Global/build/CMakeFiles/tfs_pch.dir
+/opt/otserver/ot7/Global/build/CMakeFiles/all_pch.dir
+/opt/otserver/ot7/Global/build/CMakeFiles/clean_cotire.dir
+/opt/otserver/ot7/Global/build/CMakeFiles/edit_cache.dir
+/opt/otserver/ot7/Global/build/CMakeFiles/rebuild_cache.dir
+/opt/otserver/ot7/Global/build/src/CMakeFiles/edit_cache.dir
+/opt/otserver/ot7/Global/build/src/CMakeFiles/rebuild_cache.dir
