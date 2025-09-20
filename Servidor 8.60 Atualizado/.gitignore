@@ -25,6 +25,13 @@ htdocs/cache/*
 htdocs/config/config.php
 htdocs/config/config.local.php
 .env
+
+# Arquivos grandes que excedem o limite do GitHub
+cliente/Tibia.spr
+cliente/Tibia.dat
+cliente/Tibia.pic
+cliente/Tibia.otfi
+Global/src/cotire/tfs_CXX_prefix.hxx.gch
 *.log
 logs/
 backup/
